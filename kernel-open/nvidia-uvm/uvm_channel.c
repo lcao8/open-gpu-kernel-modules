@@ -2108,7 +2108,8 @@ NV_STATUS uvm_channel_check_errors(uvm_channel_t *channel)
         }
     }
 
-    uvm_global_set_fatal_error(status);
+    // HOTPLUG SUPPORT: treat channel error as non-fatal
+    //uvm_global_set_fatal_error(status);
 
     return status;
 }
